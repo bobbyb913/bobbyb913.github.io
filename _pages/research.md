@@ -5,7 +5,7 @@ author_profile: true
 title: Research
 permalink: /research/
 header: 
-    image: /assets/images/icdl_poster_irl.jpg
+    image: /assets/images/icdl_poster_irl.JPG
     imager_description: "Research poster clipped to a frame"
 ---
 
