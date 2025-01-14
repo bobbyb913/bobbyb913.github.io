@@ -6,8 +6,8 @@ main:
     url: /coursework/
   - title: "Professional"
     url: /professional-work/
-  # - title: "Other Projects"
-  #   url: /other-projects/
+  - title: "Other Projects"
+    url: /other-projects/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

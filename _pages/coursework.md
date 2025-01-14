@@ -4,6 +4,8 @@ toc: true
 author_profile: true
 title: Coursework
 permalink: /coursework/
+header:
+    image: /assets/images/wesleyan.jpg
 ---
 
 ## “Exploring the genetic basis of second language learning: A systematic review”
@@ -16,7 +18,7 @@ We were assigned to pick a behavior of interest and write a review on the behavi
 
 ### Text
 
-<a href="/assets/documents/Bourque_2023_Review_2023-07-04.pdf" class="btn btn--primary btn--large">View PDF</a> 
+<a href="/assets/documents/Bourque_2023_Review_2023-07-04.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">View PDF in new tab</a> 
 
 <embed src="/assets/documents/Bourque_2023_Review_2023-07-04.pdf" type="application/pdf">
 
@@ -37,7 +39,7 @@ Even though it is in Italian, I think it's a neat interdisciplinary project I wa
 
 ### Text
 
-<a href="/assets/documents/La fisiologia e la psicologia dell’amore medievale.pdf" class="btn btn--primary btn--large">View PDF</a> 
+<a href="/assets/documents/La fisiologia e la psicologia dell’amore medievale.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">View PDF in new tab</a> 
 
 <embed src="/assets/documents/La fisiologia e la psicologia dell’amore medievale.pdf" type="application/pdf">
 
