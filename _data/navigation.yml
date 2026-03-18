@@ -1,13 +1,9 @@
 # main links
 main:
-  - title: "Research"
-    url: /research/
-  - title: "Coursework"
-    url: /coursework/
-  - title: "Professional"
-    url: /professional-work/
-  - title: "Other Projects"
-    url: /other-projects/
+  - title: "Science Exhibit In-A-Book"
+    url: /science-exhibit/
+  - title: "Stroop Says"
+    url: /stroop/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
