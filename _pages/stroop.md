@@ -11,7 +11,7 @@ permalink: /stroop/
 
 <img src="/assets/images/stroop.png" alt="The Stroop says game, four buttons in primary colors and green around a central screen in a square enclosure"  style="width:900px;margin: auto;display: block">
 
-{% include video id="1qPdraNJLOK96BLD1IY2-5uXz0fRgmmII" provider="google-drive" %}
+{% include video id="1e4itAq5uQiYPHxzZ7hyCmaLUwuoqaG6L" provider="google-drive" %}
 
 This project was an exercise in CAD modeling and game design that I took up over the summer between semesters of my grad program. 
 
