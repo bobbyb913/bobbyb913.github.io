@@ -2,6 +2,8 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import visualImage from "../assets/images/visual-system.webp";
+import membraneImage from "../assets/images/membrane-transport.webp";
 
 const pageTitle = "Science Exhibit In-A-Book";
 ---
@@ -40,7 +42,7 @@ const pageTitle = "Science Exhibit In-A-Book";
 		</h2>
 		<h3 class="col-span-3 text-xl ">The Visual System</h3>
 		<div class="grid md:grid-cols-3 gap-4 my-4">
-			<img alt="a diagram of the eye and optic nerves with moveable pieces" class="rounded-box" src="../src/assets/images/visual-system.webp" />
+			<img loading="lazy" alt="a diagram of the eye and optic nerves with moveable pieces" class="rounded-box" src={visualImage.src}} />
 			<div class="col-span-2 space-y-4">
 				<p>
 					"The Visual System" invites learners to put "lesions" along the
@@ -59,7 +61,7 @@ const pageTitle = "Science Exhibit In-A-Book";
 
 		<h3 class="col-span-3 text-xl">Membrane Transport</h3>
 		<div class="grid md:grid-cols-3 gap-4">
-			<img alt="a membrane divides a page in half with lights on either side and moveable proteins in the middle" class="rounded-box" src="../src/assets/images/membrane-transport.webp" />
+			<img loading="lazy" alt="a membrane divides a page in half with lights on either side and moveable proteins in the middle" class="rounded-box" src={membraneImage.src} />
 			<div class="col-span-2 space-y-4">
 				<p>
 					"Membrane Transport" invites learners to put proteins on the

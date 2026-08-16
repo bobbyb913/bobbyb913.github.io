@@ -2,6 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import stroopImage from "../assets/images/stroop.webp";
 
 const pageTitle = "Stroop Says";
 ---
@@ -39,7 +40,7 @@ const pageTitle = "Stroop Says";
             Project Details
         </h2>
         <div class="grid md:grid-cols-3 gap-4 my-4">
-            <img alt="a handheld game with four buttons and a screen in the middle" class="rounded-box" src="../src/assets/images/stroop.webp" />
+            <img loading="lazy" alt="a handheld game with four buttons and a screen in the middle" class="rounded-box" src={stroopImage.src}} />
             <div class="col-span-2 space-y-4">
                <p>The objective of Stroop Says is to press the
                 button that corresponds with the color the word is written in,
