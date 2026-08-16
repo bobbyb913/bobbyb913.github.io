@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: emerald --default
+}
+
+iframe {
+  width: 100%;
+  height: 200px
+}
+
+@media (width >=48rem) {
+  iframe {
+    width: 100%;
+    height: 315px
+  }
+}
+
+@media (width <48rem) {
+  .hover-art {
+    display: none
+  }
+}
+
+@keyframes wiggle {
+
+  20%,
+  40% {
+    transform: rotate(-3deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(3deg);
+  }
+
+  0%,50% {
+    transform: rotate(0deg);
+  }
+}
+
+.stroop {
+  stroke: var(--color-primary-content);
+  stroke-width: 10;
+}
+
+.stroop:hover {
+  animation: none
+}
+
+.stroop-case,
+.stroop-button-1,
+.stroop-button-2,
+.stroop-button-3,
+.stroop-button-4,
+.stroop-screen {
+  fill: var(--color-primary);
+  transition: all .2s ease-in-out;
+}
+
+.stroop:hover .stroop-case {
+  stroke: #073b4c;
+  fill: #073b4c;
+  animation: none;
+}
+
+.stroop:hover .stroop-button-1 {
+  stroke: #073b4c;
+  fill: #ffd166;
+  animation: none;
+}
+
+.stroop:hover .stroop-button-2 {
+  stroke: #073b4c;
+  fill: #06d6a0;
+  animation: none;
+}
+
+.stroop:hover .stroop-button-3 {
+  stroke: #073b4c;
+  fill: #118ab2;
+  animation: none;
+}
+
+.stroop:hover .stroop-button-4 {
+  stroke: #073b4c;
+  fill: #ef476f;
+  animation: none;
+}
+
+.stroop:hover .stroop-screen {
+  stroke: var(--color-base-100);
+  fill: #073b4c;
+  animation: none;
+}
+
+.science-book {
+  stroke: var(--color-primary-content);
+  stroke-width: 1.4;
+}
+
+.science-book:hover .book-page,
+.science-book:hover .eye {
+  fill: var(--color-base-100);
+  stroke: #073b4c;
+}
+
+.science-book:hover .red-ion {
+  fill: #ef476f;
+  stroke: var(--color-base-100);
+}
+
+.science-book:hover .red-nerve {
+  stroke: #ef476f;
+  fill: var(--color-base-100);
+}
+
+.science-book:hover .blue-ion {
+  fill: #118ab2;
+  stroke: var(--color-base-100);
+}
+
+.science-book:hover .blue-nerve {
+  stroke: #118ab2;
+  fill: var(--color-base-100);
+}
+
+.science-book:hover .protein {
+  stroke: var(--color-base-100);
+  fill: #ffd166
+}
+
+.protein,
+.blue-ion,
+.red-ion,
+.eye,
+.book-page,
+.red-nerve,
+.blue-nerve {
+  fill: var(--color-primary);
+  transition: all .2s ease-in-out;
+}

@@ -1,0 +1,103 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
+const cardFormat = "card shadow-sm";
+const cardFormatBody = "card-body";
+const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Home Page</title>
+	</head>
+
+	<body>
+		<Navigation />
+
+		<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+			<div class="p-4 flex flex-col md:flex-row gap-4">
+				<div
+					class="md:w-2/3 mx-auto my-auto text-center space-y-4 text-secondary text-2xl font-semibold"
+				>
+					<p>
+						I design tangible interactions that encourage learning
+						and play.
+					</p>
+					<p>
+						With a background in neuroscience and biology, my projects are inspired by the natural world.
+					</p>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div>
+				<h2 class="text-2xl font-bold text-center w-1/3 mx-auto">
+					Projects
+				</h2>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+				<div class={cardFormat}>
+					<figure>
+						<img src="../src/assets/images/visual-system.webp" />
+					</figure>
+					<div class={cardFormatBody}>
+						<h3 class="card-title text-xl font-bold">
+							Science Exhibit In-A-Book
+						</h3>
+						<p>
+							Portable exhibits on topics in biology and
+							neuroscience.
+						</p>
+						<a class={cardFormatButton} href="/science-exhibit"
+							>Learn more</a
+						>
+					</div>
+				</div>
+				<div class={cardFormat}>
+					<figure>
+						<img src="../src/assets/images/stroop.webp" />
+					</figure>
+					<div class={cardFormatBody}>
+						<h3 class="card-title text-xl font-bold">
+							Stroop Says
+						</h3>
+						<p>A twist on the classic children's toy.</p>
+						<a class={cardFormatButton} href="/stroop">Learn more</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div>
+				<h2 class="text-2xl font-bold text-center w-1/3 mx-auto">
+					About
+				</h2>
+				<div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+					<img
+						src="../src/assets/images/profile.webp"
+						class="rounded-box"
+					/>
+					<div class="space-y-4 md:col-span-2 my-auto text-lg">
+						<p>
+							Hello! My name is Bobby. I am a graduate student at
+							CU Boulder at the ATLAS Institute working towards my
+							master’s degree in Creative Technology and Design.
+						</p>
+
+						<p>
+							In my free time you can find me running, doing
+							crosswords, and baking.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>

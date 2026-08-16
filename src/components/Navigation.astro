@@ -1,0 +1,39 @@
+---
+import Stroop from "../components/Stroop-icon.astro";
+import Book from "../components/Science-book-icon.astro";
+---
+
+<div class="navbar bg-primary mb-4">
+    <div class="hover-art w-1/8 flex mr-4">
+        <div class="my-auto">
+            <a href="/stroop">
+                <Stroop />
+            </a>
+        </div>
+        <div class="my-auto">
+            <a href="/science-exhibit">
+                <Book />
+            </a>
+        </div>
+    </div>
+    <div>
+        <a class="hover-art text-lg font-bold" href="/">Robert Bourque's Portfolio</a>
+    </div>
+    <div class="md:ml-auto md:mr-0 mx-auto">
+        <ul class="menu menu-horizontal menu-lg">
+            
+            <li>
+                <details class="">
+                    <summary class="btn btn-ghost">Projects</summary>
+                    <ul>
+                        <li>
+                            <a href="/science-exhibit">Science Exhibit Book</a>
+                        </li>
+                        <li><a href="/stroop">Stroop Says</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a class="btn btn-ghost" href="/">Home</a></li>
+        </ul>
+    </div>
+</div>

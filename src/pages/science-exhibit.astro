@@ -1,0 +1,115 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const pageTitle = "Science Exhibit In-A-Book";
+---
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{pageTitle}</title>
+</head>
+
+<body>
+	<Navigation />
+	<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+		<h1 class="text-2xl font-bold">
+			{pageTitle}
+		</h1>
+		<div class="grid md:grid-cols-3 gap-4">
+			<blockquote class="my-auto italic p-3 text-secondary text-2xl font-semibold">
+				A portable science exhibit packed into a board book exploring
+				topics in neuroscience and biology.
+			</blockquote>
+			<iframe class="col-span-2 rounded-box" loading="lazy"
+				src="https://www.youtube-nocookie.com/embed/cAI-dG-rupA?si=f5GZQNBSkwrXwuYO&controls=1&autoplay=0&rel=0&modestbranding=1"
+				title="YouTube video player"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		<div class="divider"></div>
+		<h2 class="text-xl font-bold">
+			Project Details
+		</h2>
+		<h3 class="col-span-3 text-xl ">The Visual System</h3>
+		<div class="grid md:grid-cols-3 gap-4 my-4">
+			<img class="rounded-box" src="../src/assets/images/visual-system.webp" />
+			<div class="col-span-2 space-y-4">
+				<p>
+					"The Visual System" invites learners to put "lesions" along the
+					visual system and hold up the book to their eyes to experience
+					an altered visual system.
+				</p>
+				<p>
+					When parts of the optic nerve or optic tract are destroyed, our
+					vision is affected in predictable ways. Depending on where
+					damage occurs on the visual system, it can cause blindness to a
+					single eye or to a "visual field" that is created by both eyes.
+				</p>
+
+			</div>
+		</div>
+
+		<h3 class="col-span-3 text-xl">Membrane Transport</h3>
+		<div class="grid md:grid-cols-3 gap-4">
+			<img class="rounded-box" src="../src/assets/images/membrane-transport.webp" />
+			<div class="col-span-2 space-y-4">
+				<p>
+					"Membrane Transport" invites learners to put proteins on the
+					membrane to observe how the LED "particles" move across.
+				</p>
+				<p>
+					Our cells need to control their contents by allowing substances
+					in and taking substances out. When substances are not able to
+					pass through the membrane on their own, they need the assistance
+					of facilitated diffusion or active transport. Facilitated
+					diffusion doesn't require energy but only allows substances to
+					"even out", whereas active diffusion can move substances
+					anywhere but requires energy every time.
+				</p>
+
+			</div>
+		</div>
+		<div class="divider"></div>
+		<h2 class="text-xl font-bold">
+			Technical Specs
+		</h2>
+		<div class="flex flex-col md:flex-row ">
+			<div class="mx-auto">
+				<h3 class="md:text-lg underline">Electronics</h3>
+				<ul class="list-disc">
+					<li>Arduino</li>
+					<li>Motors</li>
+					<li>FastLED</li>
+				</ul>
+			</div>
+			<div class="divider divider-vertical md:divider-horizontal"></div>
+			<div class="mx-auto">
+				<h3 class="md:text-lg underline">Fabrication</h3>
+				<ul class="list-disc">
+					<li>Rhino 3D</li>
+					<li>Laser cutting</li>
+				</ul>
+			</div>
+			<div class="divider divider-vertical md:divider-horizontal"></div>
+			<div class="mx-auto ">
+				<h3 class="md:text-lg underline">Materials</h3>
+				<ul class="list-disc">
+					<li>Paper</li>
+					<li>Copper tape</li>
+					<li>Magnets</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<Footer />
+</body>
+
+</html>
