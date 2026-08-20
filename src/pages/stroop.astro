@@ -8,90 +8,96 @@ const pageTitle = "Stroop Says";
 ---
 
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-</head>
+    <body>
+        <Navigation />
+        <div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+            <h1 class="text-2xl font-bold">
+                {pageTitle}
+            </h1>
+            <div class="grid md:grid-cols-3 gap-4">
+                <blockquote
+                    class="my-auto italic p-3 text-secondary text-2xl font-semibold"
+                >
+                    A handheld game that combines the Stroop effect with the toy
+                    "Simon".
+                </blockquote>
+                <iframe
+                    class="col-span-2 rounded-box"
+                    loading="lazy"
+                    src="https://www.youtube-nocookie.com/embed/MtIXWUcXbPA?si=f5GZQNBSkwrXwuYO&controls=1&autoplay=0&rel=0&modestbranding=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="divider"></div>
+            <h2 class="text-xl font-bold">Project Details</h2>
+            <div class="grid md:grid-cols-3 gap-4 my-4">
+                <img
+                    loading="lazy"
+                    alt="a handheld game with four buttons and a screen in the middle"
+                    class="rounded-box"
+                    src={stroopImage.src}
+                />
+                <div class="col-span-2 space-y-4">
+                    <p>
+                        The objective of Stroop Says is to press the button that
+                        corresponds with the color the word is written in,
+                        rather than the word itself. This project was to
+                        practice CAD modeling and interaction design over the
+                        summer between semesters of my grad program.
+                    </p>
+                    <p>
+                        There are two modes: memory mode and speed mode. In
+                        memory mode, players observe a pattern and copy it,
+                        increasing the length on each successful round. In this
+                        mode, the memory of the pattern quickly overcomes the
+                        difficulty of the mismatched stimuli from the Stroop
+                        effect.
+                    </p>
+                    <p>
+                        In speed mode, players press the button corresponding to
+                        the color of the word before time runs out. In this
+                        mode, the effect is in full force. The colors and words
+                        alternate between periods of matching and non-matching.
+                        The rhythm illustrates how hard it is to separate the
+                        stimuli when they are no longer matching, and making it
+                        more fun to try to not get tripped up!
+                    </p>
+                    <p></p>
+                </div>
+            </div>
 
-<body>
-    <Navigation />
-    <div class="mx-auto w-7/8 md:w-2/3 space-y-2">
-        <h1 class="text-2xl font-bold">
-            {pageTitle}
-        </h1>
-        <div class="grid md:grid-cols-3 gap-4">
-            <blockquote class="my-auto italic p-3 text-secondary text-2xl font-semibold">
-                A handheld game that combines the Stroop
-                effect with the toy "Simon". 
-            </blockquote>
-            <iframe class="col-span-2 rounded-box" loading="lazy"
-                src="https://www.youtube-nocookie.com/embed/MtIXWUcXbPA?si=f5GZQNBSkwrXwuYO&controls=1&autoplay=0&rel=0&modestbranding=1"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="divider"></div>
-        <h2 class="text-xl font-bold">
-            Project Details
-        </h2>
-        <div class="grid md:grid-cols-3 gap-4 my-4">
-            <img loading="lazy" alt="a handheld game with four buttons and a screen in the middle" class="rounded-box" src={stroopImage.src}} />
-            <div class="col-span-2 space-y-4">
-               <p>The objective of Stroop Says is to press the
-                button that corresponds with the color the word is written in,
-                rather than the word itself.</p>
-                <p>
-                    "Stroop Says" has two modes: memory mode and speed mode. In
-                    memory mode, players observe a pattern and copy it, increasing
-                    the length on each successful round. In this mode, the memory of
-                    the pattern quickly overcomes the difficulty of the mismatched
-                    stimuli from the Stroop effect.
-                </p>
-                <p>
-                    In speed mode, players press the button corresponding to the
-                    color of the word before time runs out. In this mode, the effect
-                    is in full force. The colors and words alternate between periods
-                    of matching and non-matching. The rhythm illustrates how hard it
-                    is to separate the stimuli when they are no longer matching, and
-                    making it more fun to try to not get tripped up!
-                </p>
-                 <p>
-                    This project was an exercise in CAD modeling and game design
-                    that I took up over the summer between semesters of my grad
-                    program.
-                </p>
-
+            <div class="divider"></div>
+            <h2 class="text-xl font-bold">Technical Specs</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="mx-auto">
+                    <h3 class="md:text-lg underline">Electronics</h3>
+                    <ul class="list-disc">
+                        <li>ATtiny84</li>
+                        <li>TinyTFT</li>
+                    </ul>
+                </div>
+                <div class="divider divider-vertical md:divider-horizontal">
+                </div>
+                <div class="mx-auto">
+                    <h3 class="md:text-lg underline">Fabrication</h3>
+                    <ul class="list-disc">
+                        <li>Autodesk Fusion</li>
+                        <li>3D Printing</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="divider"></div>
-        <h2 class="text-xl font-bold">
-            Technical Specs
-        </h2>
-        <div class="flex flex-col md:flex-row ">
-            <div class="mx-auto">
-                <h3 class="md:text-lg underline">Electronics</h3>
-                <ul class="list-disc">
-                    <li>ATtiny84</li>
-                    <li>TinyTFT</li>
-                </ul>
-            </div>
-            <div class="divider divider-vertical md:divider-horizontal"></div>
-            <div class="mx-auto">
-                <h3 class="md:text-lg underline">Fabrication</h3>
-                <ul class="list-disc">
-                    <li>Autodesk Fusion</li>
-                    <li>3D Printing</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <Footer />
-</body>
-
+        <Footer />
+    </body>
 </html>
