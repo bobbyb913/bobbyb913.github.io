@@ -1,0 +1,60 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import profileImage from "../assets/images/profile.webp";
+
+import "../styles/global.css";
+const cardFormat = "card shadow-sm";
+const cardFormatBody = "card-body";
+const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Contact</title>
+	</head>
+
+	<body>
+		<Navigation />
+		<div class="mx-auto w-7/8 md:w-2/3 space-y-2 min-h-screen">
+			<div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+				<img
+					loading="lazy"
+					alt="Bobby smiles in front of a Venetian canal"
+					src={profileImage.src}
+					class="rounded-box"
+				/>
+				<div class="space-y-4 md:col-span-2 text-lg">
+					<h2 class="text-2xl font-bold">About</h2>
+					<p>
+						I am currently a graduate student at CU Boulder at the
+						ATLAS Institute working towards my master’s degree in
+						Creative Technology and Design.
+					</p><div class="divider"></div>
+					<h2 class="text-2xl font-bold">Connect with me!</h2>
+
+					<h3 class="text-xl text-accent">
+						<a
+							class="link link-hover"
+							href="mailto:bobby.bourque913@gmail.com"
+							>bobby.bourque913@gmail.com</a
+						>
+					</h3>
+					<h3 class="text-xl text-accent">
+						<a
+							href="www.linkedin.com/in/rmbourque"
+							class="link link-hover">LinkedIn</a
+						>
+					</h3>
+				</div>
+			</div>
+			<div class="divider"></div>
+		</div>
+		<Footer />
+	</body>
+</html>

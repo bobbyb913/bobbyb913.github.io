@@ -17,23 +17,26 @@ import Book from "../components/Science-book-icon.astro";
         </div>
     </div>
     <div>
-        <a class="hover-art text-lg font-bold" href="/">Robert Bourque's Portfolio</a>
+        <a class="hover-art text-lg font-bold" href="/"></a>
     </div>
     <div class="md:ml-auto md:mr-0 mx-auto">
         <ul class="menu menu-horizontal menu-lg">
-            
-            <li>
-                <details class="">
-                    <summary class="btn btn-ghost">Projects</summary>
-                    <ul>
-                        <li>
-                            <a href="/science-exhibit">Science Exhibit Book</a>
-                        </li>
-                        <li><a href="/stroop">Stroop Says</a></li>
-                    </ul>
-                </details>
-            </li>
             <li><a class="btn btn-ghost" href="/">Home</a></li>
+            <li class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost">
+                    Projects
+                </div>
+                <ul
+                    tabindex="-1"
+                    class="dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                >
+                    <li>
+                        <a href="/science-exhibit">Science Exhibit Book</a>
+                    </li>
+                    <li><a href="/stroop">Stroop Says</a></li>
+                </ul>
+            </li>
+            <li><a class="btn btn-ghost" href="/contact">Contact</a></li>
         </ul>
     </div>
 </div>

@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 import profileImage from "../assets/images/profile.webp";
 import stroopImage from "../assets/images/stroop.webp";
 import bookImage from "../assets/images/visual-system.webp";
+import electronicsImage from "../assets/images/electronics.webp";
+import Book from "../components/Science-book-icon-little.astro";
 
 import "../styles/global.css";
 const cardFormat = "card shadow-sm";
@@ -25,18 +27,33 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 		<Navigation />
 
 		<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
-			<div class="p-4 flex flex-col md:flex-row gap-4">
+			<div class="hero rounded-lg bg-base-200">
 				<div
-					class="md:w-2/3 mx-auto my-auto text-center space-y-4 text-secondary text-2xl font-semibold"
+					class="hero-content md:flex grid md:grid-cols-2 grid-cols-1"
 				>
-					<p>
-						I design tangible interactions that encourage learning
-						and play.
-					</p>
-					<p>
-						With a background in neuroscience and biology, my
-						projects are inspired by the natural world.
-					</p>
+					<img
+						loading="lazy"
+						alt="stripboards with wires, mechanical keys, lcd displays and esp32s"
+						src={electronicsImage.src}
+						class="md:max-w-sm rounded-lg shadow-2xl"
+					/>
+					<div class="">
+						<h1 class="text-3xl font-bold">
+							I make toys and games that explore science concepts.
+						</h1>
+						<p class="py-6 text-xl">
+							I like to combine education and interaction design
+							with electronics and physical fabrication. Thanks to
+							my background in neuroscience and biology, my
+							projects are inspired by the natural world.
+						</p>
+						<a
+							href="/science-exhibit"
+							class="text-lg science-book inline-flex btn btn-primary py-7"
+						>
+							Featured Project:<Book />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="divider"></div>
@@ -84,6 +101,7 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 						>
 					</div>
 				</div>
+				
 			</div>
 			<div class="divider"></div>
 			<div>
