@@ -1,0 +1,105 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import y2kImage from "../assets/images/terminal_under_dev.webp";
+import floppyImage from "../assets/images/floppy_disk.webp";
+import cardboardImage from "../assets/images/cardboard_terminal.webp";
+import mapImage from "../assets/images/escape_room_mapping.webp";
+import terminalProtoImage from "../assets/images/terminal_first_proto.webp";
+import binaryImage from "../assets/images/binary_proto.webp";
+import serverImage from "../assets/images/server_tower_cables.webp";
+import solderingImage from "../assets/images/soldering.webp";
+
+const pageTitle = "Y2K Escape Room";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+
+	<body>
+		<Navigation />
+		<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+			<h1 class="text-2xl font-bold">
+				{pageTitle}
+			</h1>
+			<div class="grid md:grid-cols-3 gap-4">
+				<blockquote
+					class="my-auto italic p-3 text-secondary text-2xl font-semibold"
+				>
+					A Y2K-themed escape room where you race to save the world
+					before midnight on New Year's Eve.
+				</blockquote>
+				<img
+					loading="lazy"
+					alt="a console made out of wood with an LCD display with a date and two buttons, unfinished"
+					class="rounded-box col-span-2 mx-auto"
+					src={y2kImage.src}
+				/>
+			</div>
+			<div class="divider"></div>
+			<h2 class="text-3xl font-bold pb-3">
+				This is a semester-long group project for the course "Design
+				Studio" at ATLAS that will be completed in December.
+			</h2>
+			<div class="grid md:grid-cols-3 gap-4">
+				<div class="flex flex-col gap-4">
+					<img
+						loading="lazy"
+						alt="3d printed floppy disk with paper that says 'escape room test'"
+						class="rounded-box"
+						src={floppyImage.src}
+					/>
+					<img
+						loading="lazy"
+						alt="cardboard prototype of puzzle device with buttons and display"
+						class="rounded-box"
+						src={cardboardImage.src}
+					/>
+				</div>
+				<div class="flex flex-col gap-4">
+					<img
+						loading="lazy"
+						alt="mapping out of escape room puzzles and connections"
+						class="rounded-box"
+						src={mapImage.src}
+					/>
+					<img
+						loading="lazy"
+						alt="initial breadboard prototype of terminal puzzle with displays and buttons"
+						class="rounded-box"
+						src={terminalProtoImage.src}
+					/>
+					<img
+						loading="lazy"
+						alt="device that turns flipped switches in binary to base-10 seven segment displays"
+						class="rounded-box"
+						src={binaryImage.src}
+					/>
+				</div>
+				<div class="flex flex-col gap-4">
+					<img
+						loading="lazy"
+						alt="five cables hang from a silver board with 5 rows of possible connections"
+						class="rounded-box"
+						src={serverImage.src}
+					/>
+					<img
+						loading="lazy"
+						alt="solding components together"
+						class="rounded-box"
+						src={solderingImage.src}
+					/>
+				</div>
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>

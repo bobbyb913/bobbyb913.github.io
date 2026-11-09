@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import profileImage from "../assets/images/profile.webp";
 import stroopImage from "../assets/images/stroop.webp";
 import bookImage from "../assets/images/visual-system.webp";
+import tileImage from "../assets/images/tile_brainstorm.webp";
+import lightboxImage from "../assets/images/lightbox_model.webp";
+import y2kImage from "../assets/images/terminal_under_dev.webp";
 import electronicsImage from "../assets/images/electronics.webp";
 import Book from "../components/Science-book-icon-little.astro";
 
@@ -20,7 +23,7 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Home Page</title>
+		<title>Robert Bourque's Portfolio</title>
 	</head>
 
 	<body>
@@ -38,14 +41,21 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 						class="md:max-w-sm rounded-lg shadow-2xl"
 					/>
 					<div class="">
-						<h1 class="text-3xl font-bold">
+						<h1 class="text-3xl font-bold pb-3">
 							I make toys and games that explore science concepts.
 						</h1>
-						<p class="py-6 text-xl">
+						<p class="pb-3 text-xl">
 							I like to combine education and interaction design
-							with electronics and physical fabrication. Thanks to
-							my background in neuroscience and biology, my
-							projects are inspired by the natural world.
+							with <span class="font-bold">electronics</span> and <span
+								class="font-bold">physical fabrication</span
+							>. I am fascinated by neuroscience, biology, and
+							language.
+						</p>
+						<p class="pb-3 text-xl">
+							I am hoping to apply the skills I have learned to
+							work in science museums & makerspaces, where people <span
+								class="font-bold">play</span
+							> and <span class="font-bold">learn</span>.
 						</p>
 						<a
 							href="/science-exhibit"
@@ -66,6 +76,7 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 				<div class={cardFormat}>
 					<figure>
 						<img
+							class="h-75 object-contain"
 							loading="lazy"
 							alt="diagram of the eye with moveable pieces"
 							src={bookImage.src}
@@ -87,6 +98,7 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 				<div class={cardFormat}>
 					<figure>
 						<img
+							class="h-75 object-contain"
 							loading="lazy"
 							alt="a handheld game with four buttons and a screen in the middle"
 							src={stroopImage.src}
@@ -101,7 +113,71 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 						>
 					</div>
 				</div>
-				
+				<div class={cardFormat}>
+					<figure>
+						<img
+							class="h-75 object-contain"
+							loading="lazy"
+							alt="three tiles, representing carbon, nitrogen, and oxygen have blue dots representing unpaired electrons and strips of yellow representing a bond"
+							src={tileImage.src}
+						/>
+					</figure>
+					<div class={cardFormatBody}>
+						<h3 class="card-title text-xl font-bold">
+							Octet Rule Tiles
+						</h3>
+						<p>
+							UNDER DEVELOPMENT. An alternative molecular modeling
+							kit.
+						</p>
+						<a class={cardFormatButton} href="/octet">See preview</a
+						>
+					</div>
+				</div>
+
+				<div class={cardFormat}>
+					<figure>
+						<img
+							class="h-75 object-contain"
+							loading="lazy"
+							alt="model of a console with an angled surface with a hole in the middle and an arm extending up for a camera"
+							src={lightboxImage.src}
+						/>
+					</figure>
+					<div class={cardFormatBody}>
+						<h3 class="card-title text-xl font-bold">
+							Contrasting Color Lightbox
+						</h3>
+						<p>
+							UNDER DEVELOPMENT. Draw short animations with
+							flashing lights.
+						</p>
+						<a class={cardFormatButton} href="/lightbox"
+							>See preview</a
+						>
+					</div>
+				</div>
+
+				<div class={cardFormat}>
+					<figure>
+						<img
+							class="h-75 object-contain"
+							loading="lazy"
+							alt="a console made out of wood with an LCD display with a date and two buttons, unfinished"
+							src={y2kImage.src}
+						/>
+					</figure>
+					<div class={cardFormatBody}>
+						<h3 class="card-title text-xl font-bold">
+							Y2K Escape Room
+						</h3>
+						<p>
+							UNDER DEVELOPMENT. Race against the clock to save
+							the world from Y2K!
+						</p>
+						<a class={cardFormatButton} href="/y2k">See preview</a>
+					</div>
+				</div>
 			</div>
 			<div class="divider"></div>
 			<div>
@@ -117,15 +193,14 @@ const cardFormatButton = "btn btn-accent w-1/2 mx-auto";
 					/>
 					<div class="space-y-4 md:col-span-2 my-auto text-lg">
 						<p>
-							Hello! My name is Bobby. I am a graduate student at
+							Hello! My name is Bobby. I'm a graduate student at
 							CU Boulder at the ATLAS Institute working towards my
 							master’s degree in Creative Technology and Design.
 						</p>
 						<p>
-							I am originally from outside of Boston, MA. I
-							graduated from Wesleyan University with a double
-							major in Neuroscience and Italian (and became a
-							science and language nerd).
+							I'm originally from outside of Boston. I graduated
+							from Wesleyan University with a double major in
+							Neuroscience and Italian.
 						</p>
 						<p>
 							In my free time you can find me running, doing

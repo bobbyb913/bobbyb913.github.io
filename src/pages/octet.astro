@@ -1,0 +1,71 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import tileImage from "../assets/images/tile_brainstorm.webp";
+import tilePaper1Image from "../assets/images/tile_paper_proto_1.webp";
+import tilePaper2Image from "../assets/images/tile_paper_proto_2.webp";
+import tileBrainstormImage from "../assets/images/tile_brainstorm_form.webp";
+
+const pageTitle = "Octet Rule Tiles";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+
+	<body>
+		<Navigation />
+		<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+			<h1 class="text-2xl font-bold">
+				{pageTitle}
+			</h1>
+			<div class="grid md:grid-cols-3 gap-4">
+				<blockquote
+					class="my-auto italic p-3 text-secondary text-2xl font-semibold"
+				>
+					A modeling kit that emphasizes covalent bonding and Lewis
+					structures.
+				</blockquote>
+				<img
+					loading="lazy"
+					alt="three tiles, representing carbon, nitrogen, and oxygen have blue dots representing unpaired electrons and strips of yellow representing a bond"
+					class="rounded-box col-span-2 mx-auto"
+					src={tileImage.src}
+				/>
+			</div>
+			<div class="divider"></div>
+			<h2 class="text-3xl font-bold pb-3">
+				This project is the focus of my independent study in Fall 2026
+				at ATLAS and will be completed in December.
+			</h2>
+			<div class="grid md:grid-cols-3 gap-4">
+				<img
+					loading="lazy"
+					alt="paper prototype of connections, laser cut"
+					class="rounded-box"
+					src={tilePaper1Image.src}
+				/>
+								<img
+					loading="lazy"
+					alt="paper prototype of connections, hand drawn"
+					class="rounded-box"
+					src={tilePaper2Image.src}
+				/>
+								<img
+					loading="lazy"
+					alt="page from notebook that brainstorms how the tiles might fit together"
+					class="rounded-box"
+					src={tileBrainstormImage.src}
+				/>
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>

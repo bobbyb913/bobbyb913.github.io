@@ -1,0 +1,62 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import lightboxImage from "../assets/images/lightbox_model.webp";
+import lightboxPrintProcessImage from "../assets/images/lightbox_print_process.webp";
+import lightboxPrintAssembleImage from "../assets/images/lightbox_print_assembled.webp";
+
+const pageTitle = "Chromaflip: Contrasting Color Lightbox";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Chromaflip</title>
+	</head>
+
+	<body>
+		<Navigation />
+		<div class="mx-auto w-7/8 md:w-2/3 space-y-2">
+			<h1 class="text-2xl font-bold">
+				{pageTitle}
+			</h1>
+			<div class="grid md:grid-cols-3 gap-4">
+				<blockquote
+					class="my-auto italic p-3 text-secondary text-2xl font-semibold"
+				>
+					A lightbox that helps create animations and patterns using LEDs to selectively isolate colors.
+				</blockquote>
+				<img
+					loading="lazy"
+							alt="model of a console with an angled surface with a hole in the middle and an arm extending up for a camera"
+					class="rounded-box col-span-2 mx-auto"
+					src={lightboxImage.src}
+				/>
+			</div>
+			<div class="divider"></div>
+			<h2 class="text-3xl font-bold pb-3">
+				This is a final group project for the course "Inventing Interactive Systems" at ATLAS that will be completed in December.
+			</h2>
+			<div class="grid md:grid-cols-3 gap-4">
+				<img
+					loading="lazy"
+					alt="laser cutting of fingerjoint box"
+					class="rounded-box"
+					src={lightboxPrintProcessImage.src}
+				/>
+								<img
+					loading="lazy"
+					alt="assembled lasercut box that looks like model from above"
+					class="rounded-box"
+					src={lightboxPrintAssembleImage.src}
+				/>
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
